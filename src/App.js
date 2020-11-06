@@ -12,20 +12,22 @@ state = {
 };
 
 
-updateEvents = (lat, lon) => {
- getEvents(lat, lon).then(events => this.setState({ events }));
-};
+
 
 componentDidMount(){
   this.updateEvents();
 }
 
+updateEvents = (lat, lon) => {
+  getEvents(lat, lon).then(events => this.setState({ events }));
+ };
+
  render() {
   return (
     <div className="App">
-      <EventList events={this.state.events}/>
-      <CitySearch updateEvents={this.updateEvents}/>
       <NumberOfEvents updateEvents={this.updateEvents}/>
+      <br></br><CitySearch updateEvents={this.updateEvents}/>
+      <EventList events={this.state.events}/>
     </div>
     );
   }

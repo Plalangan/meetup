@@ -14,7 +14,7 @@ handleInputChanged = (event) => {
  render() {
     return (
         <div className="NumberOfEvents">
-            <label>Number of Events:</label>
+            <label>Number of events shown: </label>
             <input 
               type="text"
               id="numberOfEventsInput"
