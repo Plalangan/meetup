@@ -5,6 +5,8 @@ async function getEvents(lat, lon) {
 }
 
 async function getSuggestions(query) {
+    if (window.location.href.startsWith('http://localhost')){
+
     return [
         {
             city: 'Munich',
@@ -26,6 +28,6 @@ async function getSuggestions(query) {
                 lon: -98.85
         }
     ]
-}
+}};
 
 export { getSuggestions, getEvents };
