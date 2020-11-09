@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { getSuggestions } from './api';
-import  InfoAlert  from './Alert';
+import  {InfoAlert}  from './Alert';
 
 class CitySearch extends Component {
 
 state = {
-    query: 'Munich',
+    query: '',
     suggestions: [ ],
-    infoText: ''
+    
 }
 
 handleInputChanged = (event) => {
@@ -29,7 +29,7 @@ handleInputChanged = (event) => {
 }
 
 handleItemClicked = (value, lat, lon) => {
-    this.setState({ query: value});
+    this.setState({ query: value, suggestions: []});
     this.props.updateEvents(lat, lon);
 }
 

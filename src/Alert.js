@@ -28,4 +28,4 @@ class InfoAlert extends Alert {
     }
 }
 
-export default InfoAlert;
+export {InfoAlert};
