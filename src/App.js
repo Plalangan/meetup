@@ -37,9 +37,8 @@ updateEvents = (lat, lon) => {
  render() {
   return (
     <div className="App">
-      
-      <NumberOfEvents updateEvents={this.updateEvents}/>
       <OfflineAlert text={this.state.offlineText}/>
+      <NumberOfEvents updateEvents={this.updateEvents}/>
       <br></br><CitySearch updateEvents={this.updateEvents}/>
       <EventList events={this.state.events}/>
     </div>
