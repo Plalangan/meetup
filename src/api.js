@@ -28,6 +28,8 @@ async function getSuggestions(query) {
                 lon: -98.85
         }
     ]
+} else {
+    return [];
 }};
 
 export { getSuggestions, getEvents };

@@ -7,7 +7,7 @@ class CitySearch extends Component {
 state = {
     query: '',
     suggestions: [ ],
-    
+    infoText: '',
 }
 
 handleInputChanged = (event) => {
@@ -38,7 +38,7 @@ handleItemClicked = (value, lat, lon) => {
     return (
         <div className="CitySearch">
             <InfoAlert text={this.state.infoText}/>
-            <input type="text" className="city" value={this.state.query} onChange={this.handleInputChanged}/>
+            <input type="text" className="city" value={this.state.query} onChange={this.handleInputChanged} placeholder="Enter City Here"/>
             <ul className="suggestions">
                 {this.state.suggestions.map(item =>
                     <li key={item.name_string} onClick={() => this.handleItemClicked(item.name_string, item.lat, item.lon)}>{item.name_string}</li>
