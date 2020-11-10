@@ -5,7 +5,8 @@
     {
       "src": "favicon.ico",
       "sizes": "512x512",
-      "type": "image/x-icon"
+      "type": "image/x-icon",
+      "purpose": "maskable"
     },
     {
       "src": "logo192.png",
