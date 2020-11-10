@@ -1,7 +1,17 @@
 import { mockEvents } from "./mock-events";
 
 async function getEvents(lat, lon) {
-    return mockEvents.events;
+    const events = mockEvents.events;
+    if (events.length) {
+        localStorage.setItem('lastEvents', JSON.stringify(events));
+
+    return events;
+    }
+    if(!navigator.onLine) {
+        const events = localStorage.getItem('lastEvents');
+        return JSON.parse(events);
+    }
+   
 }
 
 async function getSuggestions(query) {
