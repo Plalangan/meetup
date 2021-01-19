@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   padding: 2% 5%;
+  background-color: cornflowerblue;
 }
 
 .App * {
@@ -63,10 +64,11 @@ input[type="text"], input[type="number"] {
 .event {
   padding: 10px 10px 20px;
   margin-bottom: 10px;
-  text-align: left;
+  text-align: center;
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
+  background-color: beige;
 }
 
 .details-btn {
@@ -101,4 +103,16 @@ input[type="text"], input[type="number"] {
   width: 80px;
   margin: 20px 0 50px;
   text-align: right;
+}
+
+.pieChart {
+  justify-content: center;
+}
+
+.attendance{ 
+  text-align: left;
+}
+
+.scatterChart{
+  background-color: white;
 }
